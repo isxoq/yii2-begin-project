@@ -4,6 +4,7 @@
 
 $menuItems = [
     ['label' => "Bosh sahifa", 'url' => ['/site/index'], 'icon' => 'home',],
+    ['label' => "Translations", 'url' => ['/translate-manager'], 'icon' => 'list',],
     ['label' => "Gii", 'url' => ['/gii'], 'icon' => 'code,fas', 'visible' => YII_DEBUG],
     ['label' => "Clear cache", 'url' => ['/site/cache-flush'], 'icon' => 'broom,fas', 'visible' => YII_DEBUG],
 ];
@@ -15,7 +16,7 @@ $menuItems = [
     <a href="<?= to(['site/index']) ?>" class="brand-link">
         <img src="/template/adminlte3//img/AdminLTELogo.png" alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Tashxis</span>
+        <span class="brand-text font-weight-light"><?=Yii::$app->user->identity->username?></span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
